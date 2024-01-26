@@ -21,7 +21,7 @@ export function WeatherApp() {
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = `https://api.openweathermap.org/data/2.5/weather?lat=19.8762&lon=75.3433&units=Metric&appid=${apiKey}`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=Metric&appid=${apiKey}`;
       let response = await fetch(url);
       let data = await response.json();
 
